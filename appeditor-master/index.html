@@ -1,0 +1,61 @@
+<script src="jquery.min.js"></script>
+<script charset="utf-8" src="appeditor.min.js"></script>
+<link  rel="stylesheet" href="appeditor.css">
+
+<div id="editor_id"></div>
+
+
+<script>
+	var AppEdit = new AppEdit({
+		"el" : '#editor_id',
+		"name" :  'goods_detail',
+		'data' : '[{"text":"\u3010\u4e701\u4efd\u90015\u53cc\u517110\u53cc\u3011\u7537\u5973\u6b3e\u6297\u83cc\u9632\u81ed\u590f\u5b63\u9690\u5f62\u889c\u8239\u889c \u56db\u5b63\u6b3e\u9690\u5f62\u8239\u889c\u3002\u5973\u6b3e\u732b\u54aa\u6709\u591a\u79cd\u56fe\u6848\uff0c\u90fd\u5f88\u597d\u770b\uff0c\u732b\u54aa\u56fe\u6848\u968f\u673a\u54e6\u3002\u5973\u6b3e\u732b\u54aa\u8239\u889c\u989c\u8272\u968f\u673a\u53d1\u8d27\uff0c\u6709\u9ed1\u8272\uff0c\u767d\u8272\uff0c\u7070\u8272\uff0c\u7c89\u8272\uff0c\u5929\u84dd\u7b49\u989c\u8272\u3002\u7537\u6b3e\u7eaf\u8272\u8239\u889c\u968f\u673a\u53d1\u8d27\uff0c\u9ed1\u8272\u767d\u8272\u7070\u8272\u7b49\u7ecf\u5178\u7eaf\u8272\u3002\u4e70\u4e00\u4efd\u90015\u53cc\uff0c\u8d60\u9001\u6b3e\u5f0f\u968f\u673a\u3002\u3010\u6b64\u6d3b\u52a8\u6b3e\u4ea7\u54c1\u7531\u4e8e\u4ea7\u54c1\u6279\u6b21\uff0c\u8fd8\u6709\u6750\u6599\u4ee5\u53ca\u52a0\u5de5\u7684\u751f\u4ea7\u5546\u8fd8\u6709\u5de5\u827a\u987a\u5e8f\u4e0d\u540c\uff0c\u4f1a\u6709\u7ec6\u5c0f\u7684\u5dee\u5f02\uff0c\u4ecb\u610f\u614e\u62cd\u3002\u6211\u4eec\u5c06\u7ee7\u7eed\u548c\u5e73\u53f0\u4e00\u8d77\u4e3a\u60a8\u63d0\u4f9b\u7269\u7f8e\u4ef7\u5ec9\u7684\u5546\u54c1\u3011\n"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/239819578b7e2116906b39b65d17cc75.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/46dc55f6d09cadfa651a3f8e6f481457.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/f0ae9762e3e791ff0c79abaa4ec2c7a9.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/6f48ff311fc7510c328ee0fc61598775.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/9c476646b9f06ee64573fcade5e2b43a.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/2845f2aaf7bf1848661a183fa7d64617.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/9c548fd2dfdf2d7b89e039ab84ce6615.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/eda6d7f0589310274508075ee7ad17b9.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/3891b15ca30f79013dbecccbbefd2c6a.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/debb0f5b12392802ca39418d6e97a927.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/e72c78e82bb6a8e2b7e370279359f4a3.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/f59ac70ff2e1fc384c8a0aa05e6c2148.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/cb5bfbe17afb21819937c0d0adf64401.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/e7056a54a53fd87e36b7197aacf11b31.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/646ae4b001f75fb53739d80b505a82be.jpeg"},{"image":"http:\/\/omsproductionimg.yangkeduo.com\/images\/2017-06-17\/b13b7a11c176c318a60509e154d57943.jpeg"}]',
+
+		'offset' : {   //位置偏移量，默认为 零，具体根据自己的项目做相关调整。
+			"top" : 0
+		 }, 
+		
+		'debug' : false, //  是否开启调试，默认开启调试模式
+		
+		'imageupload' : function(file,current) {	
+			// 方法一 ： 本地预览  实际项目以服务器 地址为准。服务器图片上传开启后，本地预览 注释掉。
+			AppEdit.showImage(file,current);
+
+
+
+
+			//推荐 方法二，对接服务器图片上传 接口，返回数据格式 
+			/*
+				{
+			    	"result": "ok",
+			    	"url": "https://api.pintuan-xcx.cn/Public/App/default/logo-red.png",
+			    	"message": "官方演示返回固定的链接，实际项目，需要操作图片上传。"
+				}
+			*/
+
+			// 方法二 ： 服务器图片上传 单个文件上传，后端需要做图片验证。
+			/*
+			var data = new FormData();
+			data.append('file', file);
+			$.ajax({
+				type : 'POST',
+				url:"./upload.php",
+				data : data,
+				async: true,    
+		        cache: false,    
+		        contentType: false,    
+		        processData: false,    
+		        dataType: "json",
+				success:function(res) {
+					if(res.result == 'ok') {
+						var url = res.url;
+						//插入到编辑器中
+		        		AppEdit.uploadafter(url,current);  	
+					}
+		    	}
+			});*/
+			
+			
+		}
+	});	
+</script>

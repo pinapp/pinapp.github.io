@@ -1,0 +1,688 @@
+em, h1, h2, h3, h4, input, li, ol, p, span, textarea, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    list-style: none;
+    font-style: normal;
+}
+
+.cpc-diary-edit {
+    padding: 40px 0;
+	width: 980px;
+    padding: 40px 30px;
+    box-sizing: border-box;
+	font-size: 20px;
+    /*height: 30px;*/
+    /*line-height: 30px;*/
+    margin-bottom: 20px;
+	padding: 40px 30px;
+    box-shadow: none;
+    background-color: #fff;
+}
+
+.cpc-diary-edit .bars-box {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+
+.cpc-diary-edit .bars-box-justify .bars-box-position {
+    width: 328px;
+    position: relative;
+    padding: 20px 10px 20px 20px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+.cpc-diary-edit .bars-box-justify .bars-box-position .bars-box-arrow {
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    -webkit-transform: rotate(45deg) translate(-50%,-50%);
+    -ms-transform: rotate(45deg) translate(-50%,-50%);
+    transform: rotate(45deg) translate(-50%,-50%);
+    border-top: none;
+    border-right: none;
+}
+
+.cpc-diary-edit .bars-box-justify .bars-box-position .cancleAdd {
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 22px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    background: url(./images/close.57d7dd30.png) no-repeat;
+    background-position: 10px;
+}
+
+.cpc-diary-edit .bars-box-justify .bars-box-position .bars-box-title {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 0;
+    padding-bottom: 14px;
+}
+
+.cpc-diary-edit .select-modules-bars {
+    position: relative;
+    color: #222;
+}
+
+.cpc-diary-edit .add-module-box {
+    float: left;
+    margin-bottom: 0;
+	margin: 0;
+    padding: 0;
+    font-weight: 400;
+    list-style: none;
+    font-style: normal;
+}
+
+cpc-diary-edit .editor-list {
+    position: relative;
+    width: 320px;
+    margin-left: 110px;
+}
+
+.cpc-diary-edit #ueditor .empty-content {
+    text-align: center;
+    font-size: 14px;
+    color: #404040;
+    line-height: 510px;
+}
+
+.cpc-diary-edit .item {
+    padding: 10px 10px 0;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cpc-diary-edit .model-box .moni-textarea, .cpc-diary-edit .model-box textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+.cpc-diary-edit .note-ope {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+.cpc-diary-edit .note-ope div {
+    width: 40px;
+    height: 32px;
+    background-color: rgba(0,0,0,.5);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px 6px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    color: #fff;
+    float: left;
+    margin-right: 2px;
+}
+
+.cpc-diary-edit .note-ope div {
+    width: 40px;
+    height: 32px;
+    background-color: rgba(0,0,0,.5);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 10px 6px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+    line-height: 28px;
+    color: #fff;
+    float: left;
+    margin-right: 2px;
+}
+
+.cpc-diary-edit .add-btn {
+    background-image: url(./images/insert_grey.852839d6.png);
+}
+
+.cpc-diary-edit .choice-tips {
+    width: 100%;
+    height: 80px;
+    border: 1px dashed #979797;
+    margin-top: 10px;
+}
+
+.cpc-diary-edit .image-model-wrapper {
+    min-height: 84px;
+    position: relative;
+}
+
+.cpc-diary-edit .img-loading {
+    width: 100%;
+    height: 84px;
+    position: absolute;
+    top: 50%;
+    margin-top: -42px;
+    left: 0;
+    background: #fff;
+}
+
+.cpc-diary-edit .img-loading img {
+    display: block;
+    width: 84px;
+    height: 84px;
+    margin: 0 auto;
+}
+
+.cpc-diary-edit .image-model-wrapper img {
+    width: 100%;
+}
+
+.cpc-diary-edit .addModulesbtn {
+    width: 320px;
+    height: 42px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-top: none;
+    text-align: center;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #222;
+    letter-spacing: -.02px;
+    line-height: 42px;
+}
+
+.cpc-diary-edit .editor-list .mark {
+    position: absolute;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cpc-diary-edit .move-up {
+    background-image: url(./images/moveUp_grey.6c4ebfdc.png);
+}
+
+.cpc-diary-edit .move-down {
+    background-image: url(./images/moveDown_grey.a52bb56e.png);
+}
+
+.cpc-diary-edit .note-del {
+    background-image: url(./images/delete_grey.55862b18.png);
+}
+
+.cpc-diary-edit .hover, .cpc-diary-edit .model-box textarea:focus {
+    border-color: #cacaca;
+    box-shadow: 0 0 12px #d5d5d5;
+}
+
+
+.cpc-diary-edit .editor-list {
+    position: relative;
+    width: 320px;
+    margin-left: 110px;
+}
+
+.cpc-diary-edit #ueditor {
+    width: 320px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    height: 530px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-family: PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
+}
+
+.cpc-diary-edit .diary-list {
+    background: #fff;
+}
+
+.cpc-diary-edit .model-box .moni-textarea {
+    position: relative;
+    z-index: 1;
+    word-break: break-all;
+}
+
+.cpc-diary-edit .model-box {
+    position: relative;
+}
+
+.cpc-diary-edit .text-model-wrapper {
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+}
+
+.cpc-diary-edit .model-box textarea {
+    margin: 0;
+    line-height: inherit;
+    resize: none;
+    outline: 0;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    font-family: PingFang SC,Lantinghei SC,Microsoft Yahei,Hiragino Sans GB,Microsoft Sans Serif,WenQuanYi Micro Hei,sans;
+    margin: 0;
+    line-height: inherit;
+   
+}
+
+.cpc-diary-edit .addModulesbtn:hover {
+    background: #ebebeb;
+    border: 1px solid #cacaca;
+    cursor: pointer;
+    border-top: none
+}
+
+.cpc-diary-edit .editor-list .mark {
+    position: absolute;
+    z-index: 100000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cpc-diary-edit .select-modules-bars {
+    position: relative;
+    color: #222;
+}
+
+.clear {
+    clear: both;
+}
+
+.cpc-diary-edit .add-module-box {
+    float: left;
+    margin-bottom: 0;
+}
+
+.cpc-diary-edit .bars-box {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.cpc-diary-edit .bars-box-justify {
+    position: absolute;
+    z-index: 1001;
+    top: 50%;
+    left: 70%;
+}
+
+
+.cpc-diary-edit .bars-box-justify .bars-box-position .bars-box-arrow {
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    -webkit-transform: rotate(45deg) translate(-50%,-50%);
+    -ms-transform: rotate(45deg) translate(-50%,-50%);
+    transform: rotate(45deg) translate(-50%,-50%);
+    border-top: none;
+    border-right: none;
+}
+
+.cpc-diary-edit .bars-box-justify .bars-box-position .cancleAdd {
+    display: inline-block;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 22px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    background: url(./images/close.57d7dd30.png) no-repeat;
+    background-position: 10px;
+}
+
+.cpc-diary-edit .bars-box-justify .bars-box-position .bars-box-title {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #222;
+    margin-bottom: 0;
+    padding-bottom: 14px;
+}
+
+.cpc-diary-edit .select-modules-bars {
+    position: relative;
+    color: #222;
+}
+
+.cpc-diary-edit .add-module-box {
+    float: left;
+    margin-bottom: 0;
+}
+
+
+.cpc-diary-edit .add-module-box>li:first-child {
+    margin-left: -10px;
+}
+
+.cpc-diary-edit .add-module-box>li {
+	cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    color: #737373;
+    line-height: 30px;
+    padding: 0 10px;
+    float: left;
+	
+}
+
+.cpc-diary-edit .add-module-box>li .add-text-btn {
+    background-position: 11px 8px;
+}
+
+.cpc-diary-edit .add-module-box>li>div {
+    border: 1px solid #ddd;
+    background: url(./images/add_module_icans.5461c9b5.png) no-repeat #fff 40px 40px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.cpc-diary-edit .add-module-box .upload-button {
+    position: relative;
+}
+
+.cpc-diary-edit #upImage {
+    display: none;
+}
+
+.cpc-diary-edit .add-module-box .upload-button input {
+    width: 60px;
+    height: 75px;
+    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.cpc-diary-edit .add-module-box>li .add-image-btn {
+    background-position: -19px 8px;
+}
+
+.cpc-diary-edit .add-module-box>li>div {
+    border: 1px solid #ddd;
+    background: url(./images/add_module_icans.5461c9b5.png) no-repeat #fff 40px 40px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.cpc-diary-edit .add-module-box>li .add-video-btn {
+    background-position: -49px 8px;
+}
+
+.cpc-diary-edit .add-module-box>li>div {
+    border: 1px solid #ddd;
+    background: url(./images/add_module_icans.5461c9b5.png) no-repeat #fff 40px 40px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.cpc-diary-edit .add-module-box>li .add-good-btn:hover {
+    background-position: -109px -44px;
+}
+
+.cpc-diary-edit .add-module-box>li:hover>div {
+    border: 1px solid #cacaca;
+}
+
+
+.cpc-diary-edit .add-module-box>li .add-good-btn {
+    background-position: -109px 10px;
+}
+
+.cpc-diary-edit .add-module-box>li>div {
+    border: 1px solid #ddd;
+    background: url(./images/add_module_icans.5461c9b5.png) no-repeat #fff 40px 40px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.cpc-diary-edit .add-module-box>li .add-line-gap-btn:hover {
+    background-position: -79px -46px;
+}
+
+.cpc-diary-edit .add-module-box>li:hover>div {
+    border: 1px solid #cacaca;
+}
+
+.cpc-diary-edit .add-module-box>li .add-line-gap-btn {
+    background-position: -79px 8px;
+}
+
+.cpc-diary-edit .add-module-box>li>div {
+    border: 1px solid #ddd;
+    background: url(./images/add_module_icans.5461c9b5.png) no-repeat #fff 40px 40px;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.cpc-diary-edit .add-module-box>li:last-child {
+    margin-left: -4px;
+}
+
+.cpc-diary-edit .bars-box-justify .bars-box-position .bars-box-arrow {
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    -webkit-transform: rotate(45deg) translate(-50%,-50%);
+    -ms-transform: rotate(45deg) translate(-50%,-50%);
+    transform: rotate(45deg) translate(-50%,-50%);
+    border-top: none;
+    border-right: none;
+}
+
+.cpc-diary-edit .bars-box-back {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: #ddd;
+    z-index: 999;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.modal-open-1 {
+    overflow: hidden;
+}
+
+.cpc-diary-edit .bars-box-justify .bars-box-position {
+    width: 328px;
+    position: relative;
+    padding: 20px 10px 20px 20px;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+.clear {
+    clear: both;
+}
+
+/*
+em, h1, h2, h3, h4, input, li, ol, p, span, textarea, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    list-style: none;
+    font-style: normal;
+}
+*/
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.cpc-diary-edit .clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.cpc-cates .list-operate:hover,.cpc-items-by-cate .list-operate:hover {
+    color: #000
+}
+
+.cpc-diary-edit .add-btn:hover {
+    background-image: url(./images/insert.b0b3e4cb.png)
+}
+
+
+.cpc-diary-edit .note-del:hover {
+    background-image: url(./images/delete.6f43b10a.png)
+}
+
+.cpc-diary-edit .move-up:hover {
+    background-image: url(./images/moveUp.1a4acaf7.png)
+}
+
+.cpc-diary-edit .move-down:hover {
+    background-image: url(./images/moveDown.a8cf6c8d.png)
+}
+
+.cpc-diary-edit .addModulesbtn:hover {
+    background: #ebebeb;
+    border: 1px solid #cacaca;
+    cursor: pointer;
+    border-top: none
+}
+
+.cpc-diary-edit .add-module-box>li:hover>div {
+    border: 1px solid #cacaca
+}
+
+.cpc-diary-edit .add-module-box>li .add-line-gap-btn:hover {
+    background-position: -79px -46px
+}	
+
+.cpc-diary-edit .add-module-box>li .add-video-btn:hover {
+    background-position: -49px -46px
+}
+
+.cpc-diary-edit .add-module-box>li .add-image-btn:hover {
+    background-position: -19px -46px
+}
+
+.cpc-diary-edit .add-module-box>li .add-good-btn:hover {
+    background-position: -109px -44px
+}
+
+.cpc-diary-edit .add-module-box>li .add-coupon-btn:hover {
+    background-position: -139px -46px
+}
+
+.cpc-diary-edit .add-module-box>li .add-group-team-btn:hover {
+    background-position: -170px -46px
+}
+
+.cpc-diary-edit .add-module-box>li .add-diary-btn:hover {
+    background-position: -200px -46px
+}
+
+.cpc-diary-edit .hover,.cpc-diary-edit .model-box textarea:focus {
+    border-color: #cacaca;
+    box-shadow: 0 0 12px #d5d5d5
+}
+
+.cpc-diary-edit .edit-area-content {
+    min-height: 60px;
+    position: relative;
+    left: 22px;
+    z-index: 1111
+}
+
+.pin-toast-container {
+    display: block;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    z-index: 999999999;
+    text-align: center;
+    pointer-events: none;
+}
+
+.pin-toast {
+    display: none;
+    position: relative;
+    bottom: 32px;
+    max-width: 250px;
+    min-width: 100px;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgba(0,0,0,.8);
+    color: #f0f0f0;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 12px 14px;
+    text-align: center;
+    border-radius: 6px;
+}
