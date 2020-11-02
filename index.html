@@ -2,19 +2,31 @@
 window.rawData={'domain_logo':'//static.notestore.cn/v1/head_global_z_@all.png','me':seo.responseJSON,'config':$config};
 
 $(function(){ 
-	var book_banner = JSON.parse(seo.responseJSON.book.book_banner),obj = jQuery('.search-noresults');
+	
+	window.location.pathname == "/"  ? window.location.replace("https://www.kancloud.cn/@tpcms") : ''
+	
+	
+	try {
+	  var book_banner = JSON.parse(seo.responseJSON.book.book_banner),obj = jQuery('.search-noresults');
+         
 
-	 for(var key  in book_banner) {
-	 	var htm = '<p><a target="_blank" href="'+ book_banner[key].redirect_url + 
-	 			'"><img class="ui image" width="100%" src="' +  book_banner[key].image_url + '"></a></p>';
-	 	if(key == 'top') 
-	 	{
-	 		obj.prepend(htm);	
-	 	}
-	 	else if(key =='bottom') {
-	 		obj.append(htm);
-	 	}
-	 }
+
+	
+
+			 for(var key  in book_banner) {
+				var htm = '<p><a target="_blank" href="'+ book_banner[key].redirect_url + 
+						'"><img class="ui image" width="100%" src="' +  book_banner[key].image_url + '"></a></p>';
+				if(key == 'top') 
+				{
+					obj.prepend(htm);	
+				}
+				else if(key =='bottom') {
+					obj.append(htm);
+				}
+			 }
+		
+		
+	} catch(e) {}
 }); 
 
 </script><link href="//static.notestore.cn/gitbook/font-awesome.min.css" rel=stylesheet><link href=//static.notestore.cn/css/app.4c9a534263901cee70486c6d59a7b3ac.css rel=stylesheet><style type="text/css">
